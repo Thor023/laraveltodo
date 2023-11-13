@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodosController;
+use App\Http\Controllers\CategoriesController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +29,4 @@ Route::patch('/tareas/{id}', [TodosController::class, 'update'])->name('todos-up
 
 Route::delete('/tareas/{id}', [TodosController::class, 'destroy'])->name('todos-destroy');
 
+Route::resource('categories', CategoriesController::class);
