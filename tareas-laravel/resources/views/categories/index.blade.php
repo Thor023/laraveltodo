@@ -58,11 +58,12 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <form action="{{ route('categories.destroy', ['category' => $category->id])}}">
+                            <form action="{{ route('categories.destroy', ['category' => $category->id])}}" method='POST' >
                                 @method('DELETE')
                                 @csrf
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
                             </form>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
+
                         </div>
                         </div>
                     </div>
